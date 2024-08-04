@@ -26,8 +26,8 @@
       <div class="row g-3">
 
         <div class="col-12">
-          <label for="email" class="form-label">Email</label>
-          <input type="email" name="email" id="email" class="form-control">
+          <label for="source" class="form-label">Source (Type NA if not applicable)</label>
+          <input type="text" name="source" id="source" class="form-control">
         </div>
 
         <div class="col-12">
@@ -39,7 +39,6 @@
           <label for="description" class="form-label">Description</label>
           <textarea name="description" id="description" class="form-control" cols="30" rows="4"></textarea>
         </div>
-
         <div class="col-12">
           <label for="name" class="form-label">Ingredients</label><br>
           <small>Example: Ice</small>
@@ -49,35 +48,28 @@
             </div>
           </div>
         </div>
-
         <div class="col-12">
           <button type="button" class="btn btn-outline-primary" id="addIngredientsBtn">+ Ingredient</button>
         </div>
-
         <div class="col-12">
           <label for="category">Select Category</label>
           <select class="form-select form-control" name="category" aria-label="Category">
             <option selected>Select Category</option>
-            <option value="Thai">Thai</option>
-            <option value="American">American</option>
-            <option value="Chinese">Chinese</option>
-            <option value="Mexican">Mexican</option>
-            <option value="Indian">Indian</option>
+            <option value="North Indian">North Indian</option>
+            <option value="South Indian">South Indian</option>
+            <option value="Central Indian">Central Indian</option>
+            <option value="East Indian">East Indian</option>
+            <option value="West Indian">West Indian</option>
           </select>
         </div>
-
         <div class="col-12">
           <label for="image">Product Image</label>
           <input type="file" class="form-control" name="image" accept="image/*">
         </div>
-
         <div class="col-12">
           <button type="submit" class="btn btn-primary">Submit Recipe</button>
         </div>
-
       </div>
-    
     </form>
-
   </div>
 </div>

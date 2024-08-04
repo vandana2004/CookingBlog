@@ -9,7 +9,7 @@ const recipeSchema = new mongoose.Schema({
     type: String,
     required: 'This field is required.'
   },
-  email: {
+  source: {
     type: String,
     required: 'This field is required.'
   },
@@ -19,7 +19,7 @@ const recipeSchema = new mongoose.Schema({
   },
   category: {
     type: String,
-    enum: ['Thai', 'American', 'Chinese', 'Mexican', 'Indian'],
+    enum: ['North Indian', 'South Indian', 'Central Indian', 'East Indian', 'West Indian'],
     required: 'This field is required.'
   },
   image: {
@@ -29,7 +29,5 @@ const recipeSchema = new mongoose.Schema({
 });
 
 recipeSchema.index({ name: 'text', description: 'text' });
-// WildCard Indexing
-//recipeSchema.index({ "$**" : 'text' });
 
 module.exports = mongoose.model('Recipe', recipeSchema);

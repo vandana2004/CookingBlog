@@ -44,13 +44,32 @@
       <%- body -%>
     </main>
 
-    <footer class="py-5">
-      <p>Build by Vandana Chintala</p>
+    <footer class="site-footer">
+      <p>Build by Vandana Chintala and Venkat Kancherla</p>
     </footer>
 
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
   <script src="/js/script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Function to set padding-bottom of body
+      function adjustBodyPadding() {
+        const footer = document.getElementById('site-footer');
+        const body = document.body;
+        const footerHeight = footer.offsetHeight;
+    
+        body.style.paddingBottom = `${footerHeight}px`;
+      }
+    
+      // Adjust padding on initial load
+      adjustBodyPadding();
+    
+      // Optionally, adjust padding on window resize
+      window.addEventListener('resize', adjustBodyPadding);
+    });
+  </script>
+  
 </body>
 </html>
